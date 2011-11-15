@@ -45,7 +45,7 @@ corr.test = {cat("Call:")
               print(round(x$r,digits))
               cat("Sample Size \n")
               print(x$n)
-              cat("Probability values (Enteries above the diagonal are adjusted for multiple tests when appropriate.) \n")
+              cat("Probability values (Entries above the diagonal are adjusted for multiple tests.) \n")
              print(round(x$p,digits))
          },
 

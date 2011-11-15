@@ -3,7 +3,7 @@
 \section{Changes in psych version 1.1.12 (2011-12-01)}{
   \subsection{Introduction}{
     \itemize{
-      \item Version 1.1.12 is the development release of the psych package.  The released version is 1.1.11.  The second digit reflects the year (i.e., 2011), the third set the month (i.e., 1.1.11 was released in November of 2011).
+      \item Version 1.1.12 is the development release of the psych package.  The released version is 1.1.1111  The second digit reflects the year (i.e., 2011), the third set the month (i.e., 1.1.11 was released in November of 2011, the last two digits reflect the day).
       \item The psych package includes functions and data sets to do classic and modern psychometrics and to analyze personality  and experimental psychological data sets. The psych package has been developed as a supplement to courses in research methods in psychology, personality research, and graduate level psychometric theory. The functions are a supplement to the text (in progress): An introduction to psychometric theory with applications in R. 
       \item Additional functions are added sporadically.
       \item This news file reports changes that have been made as the package has been developed.
@@ -28,17 +28,20 @@
     }
   }
   }   
-\section{Changes in psych version 1.1.11 (2011-11-01)}{
+\section{Changes in psych version 1.1.1111 (2011-11-11)}{
   \subsection{Additions}{
   \itemize{ 
-  \item Nothing yet
+  \item This is basically a rerelease of version 1.1.10 trying to solve a problem with 32 bit machines and one test that fails. Originally call 1.11.01 but that one still failed the tests.
+  \item Added ... as an option in multi.hist (following a suggestion by Rui Barradas)
+  \item Added the all=FALSE option to test.psych.  This turns off one test to avoid a problem in the testing on Solaris 32 bit machines.
   }
   }
-  
   
    \subsection{Bugs Fixed}{
    \itemize{
    \item factor.scores and factor.stats were failing in tests for Linux operating systems, but not Macs or PCs.  Added some protection against complex eigen values.  
+   \item fixed problem in irt.scores reported by David Condon 
+   \item fixed irt.fa so it will properly plot for polytomous items
    }
    }
   

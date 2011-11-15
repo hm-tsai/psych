@@ -1,4 +1,4 @@
-b68ca02f7d5f47c90fd08faeea2b55fc *DESCRIPTION
+f4cc9f67fd30ccc86303db76bdf8f4e2 *DESCRIPTION
 c8b9e9f61eb0e466e00d696f143f3ceb *NAMESPACE
 13d9ab3fbb68605e336eaf29f98bd80a *R/BASS.R
 55da70d9c9bec31f46ff865582d29dc6 *R/CTA_lrn.R
@@ -77,7 +77,7 @@ c851365f569d8fc0194bd0f6840529ff *R/factor.fit.R
 ad444cb90847320b119c3084637d6262 *R/factor.pa.R
 5a07e267d2e957b5061cb96b77354d31 *R/factor.residuals.R
 164d244029600b098965441242d4d249 *R/factor.rotate.R
-266bd0279528cbf02fd8c8c8fa1e2723 *R/factor.scores.R
+6283add4beef339038b88fd38dbf4c1b *R/factor.scores.R
 8569696685ee0574bbaad722e5a958fd *R/factor.stats.R
 a3e3ead9300983972dc0ac98abf0ac3f *R/factor.wls.R
 0d1019a4b6a5a7e8b824999cf51d0714 *R/factor2cluster.R
@@ -96,7 +96,7 @@ ec5fbe362760a0d33e9e6cd837d2b3fd *R/irt.0p.R
 1db07f94eb04b7e5f3b5e792a943b7b9 *R/irt.1p.R
 f1336f796ec2f6a876fd7d302f0be921 *R/irt.2p.R
 eee2fe03133bf87b6a1c588271674f5c *R/irt.discrim.R
-6016028d834364abd9d7f3c63778a4aa *R/irt.fa.R
+6e18a76082213922768d5f3b04f1b844 *R/irt.fa.R
 7a5fed074edc954eb4f9b70abfc56a23 *R/irt.item.diff.rasch.R
 88d04add3789ee69a16312fed996cb63 *R/irt.person.rasch.R
 3c2b15eae84f7e8c49515174ef5a1ce7 *R/item.dichot.R
@@ -115,7 +115,7 @@ ebfb848141f2e063822863870429a8eb *R/mat.sqrt.R
 c7aa8f722e3227cc1e8a64ace4f506be *R/matrix.addition.R
 7efd423b076037ac3ef6b4fa9e984f55 *R/meta.schmid.R
 3cf967f4d50e5edd902d1c5aaff47b6f *R/model.fit.R
-9cf38fe497dbba13ddbdd275722efe18 *R/multi.hist.R
+a443b1c9d7ff03d7a09c26888fe88a47 *R/multi.hist.R
 86dfb6e5fbaa3ab4611f6f466d88ab17 *R/nearcor.r
 99d6724857287a479f2084fb847fd30d *R/omega.R
 16cd06a657e0d115dc7b031cf4440ef3 *R/omega.bifactor.R
@@ -139,7 +139,7 @@ c67c5ec22c5dc31323a0497ecc10ab6e *R/polychoric.R
 a8ab83cbb345bd386cfb76097ecd3ae6 *R/predict.principal.R
 45a1809c89db858ce1f70e0bc92978aa *R/principal.R
 8e9470ebadc491c5643b76789d2feb1f *R/print.factor.pa.R
-b588d8f732c423b283e845a3ba2c0bc1 *R/print.psych.R
+2c84bbb4e9e8351af18f5d15f4942453 *R/print.psych.R
 5dd613453c78d2708479c0ff897547bd *R/print.psych.fa.R
 c0efa527ba1a09a5ac85f66d75c2a6aa *R/print.psych.iclust.R
 70673f177f617cff23de2d6c341ba097 *R/print.psych.omega.R
@@ -156,7 +156,7 @@ a5d1c6fbd0b47f423fb9f0861997415c *R/reverse.code.R
 bb669c58a8ded9f581f2617d1771452f *R/scatter.hist.R
 6f0d20882be40cc26c5e23bb0a095af0 *R/schmid.R
 87c1e20356f929c500aabad0f87776dc *R/score.alpha.r
-4d07ccc2e193b1d610ed31044e298b8b *R/score.irt.poly.R
+0be5904bfc481c34ae8d9d72855213e7 *R/score.irt.poly.R
 0dbee200a3b18c619827a653b2f345d7 *R/score.items.R
 a7bd85f2a2cf8bf06cce58055bbc0d49 *R/score.multiple.choice.R
 9679b2fbe80d61f6fd6907574bdff868 *R/sdt.R
@@ -183,7 +183,7 @@ acb92c9f667cc7950ad2b74e12320722 *R/super.matrix.R
 a0c781092a59b3984e4f098785161744 *R/table2matrix.R
 32c13fb2b31de9b27184e32f09c4b0ef *R/target.rot.R
 d749df7eb65ddfd8050bd0b676665366 *R/tenberge.R
-0dbd84c1644741ee4f0a8636dcd13f26 *R/test.psych.r
+2c0e830d34e4269d5be34ca5fe8cd453 *R/test.psych.r
 506e95e56ea17347ca235fec4bdf3f99 *R/tetrachor.R
 78c92616b47e4883cf7bc609591e1740 *R/thurstone.R
 037b8034c66e5dbd6debc30de16c855b *R/toDotty.R
@@ -221,12 +221,11 @@ f992e8de136cb36c0ec86d6dbf4801e6 *data/iqitems.rda
 750cfdfc8737a90915fd746403696f5d *data/sat.act.rda
 e9421dca7adc88289073257ad3107939 *data/vegetables.rda
 be1f947a90a3357f994b848d7c95a811 *inst/CITATION
-a47c050ba99c9e8653b0fe22aeaa3797 *inst/NEWS.Rd
+b296653400872dd7d9507689d6cef853 *inst/NEWS.Rd
 76b102cfcda17f3a49b568f1e93d6643 *inst/doc/overview.Rnw
-145964d17d4d242e876bd18d46b81714 *inst/doc/overview.pdf
-45ead99ba7762a7b5105e6bd9f619a50 *inst/doc/psych_for_sem.Rnw
+4ef1d2c1f9b51612c624951ae758c207 *inst/doc/overview.pdf
 cc7e43c3387c59571f786af0659fc319 *inst/doc/psych_for_sem.pdf
-aac84b83cf16d66b58d194d76f5ce4c4 *man/00.psych-package.Rd
+79e061baf9a87416cfa6cc6c44af839b *man/00.psych-package.Rd
 d1c648092201e2fd2185c5aa2bdd2d9b *man/Gorsuch.Rd
 38283587a00406c7dd39de042339d4f0 *man/Harman.8.Rd
 3cfeeae9ad546aec75beb806a7f82b1d *man/Harman.Rd
@@ -324,7 +323,7 @@ c6ef566cc7cda02d6ac0e3c6dce63fa8 *man/make.keys.Rd
 42bd24ab4c5723382fbd3e5715edcc06 *man/matrix.addition.Rd
 da713b44772bc7f166169edd3a0b6352 *man/mixed.cor.Rd
 96a965c319631a9b8b8ae9b46860e523 *man/msq.Rd
-2d77d3571b5457ebb86afee1894eb4ce *man/multi.hist.Rd
+c90ca86307f86cf4bc02fe862f2f9366 *man/multi.hist.Rd
 04b8c25fe848521052691d72456f98db *man/neo.Rd
 18f5f04289335a19bbf8066f90b55d18 *man/omega.Rd
 667b875b099b65820e5fc15218b36a10 *man/omega.graph.Rd
@@ -373,11 +372,10 @@ c690850a725223979f81e15289a183c0 *man/structure.diagram.Rd
 4d3c9ec5c90c85dec16ef57fd26acdcc *man/structure.list.Rd
 8c84af9b8eb5a82308b9f256739c3161 *man/super.matrix.Rd
 a0b470042d5a8fbeb2fe3993670d6509 *man/table2matrix.Rd
-ec59edef2b1d794c41e62124bf0b4614 *man/test.psych.Rd
+0c17c7b0a430ac5106ff76bb01a444e5 *man/test.psych.Rd
 af1a62056f52ced5cc8cefbcf2d0dd1d *man/tetrachor.Rd
 a89bd2c5a93b3940761d0b5c6dfc515c *man/thurstone.Rd
 9eec50d1cd2208bce401da2c58c29d35 *man/tr.Rd
 8e7698beb925751bf5b8e1289497dba2 *man/vegetables.Rd
 2fbb2c6ef74f4b656fd0b1d65c9e8bc3 *man/winsor.Rd
 76b102cfcda17f3a49b568f1e93d6643 *vignettes/overview.Rnw
-45ead99ba7762a7b5105e6bd9f619a50 *vignettes/psych_for_sem.Rnw

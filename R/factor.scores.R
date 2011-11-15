@@ -105,7 +105,7 @@
      
 "matSqrt" <- function(x) {
    e <- eigen(x)
-    e$values[e$values <0] <- .Machine$double.eps
+    e$values[e$values < 0] <- .Machine$double.eps
    sqrt.ev <- sqrt(e$values)   #need to put in a check here for postive semi definite
    result <- e$vectors %*% diag(sqrt.ev) %*% t(e$vectors)
    result}
@@ -115,7 +115,9 @@
    e <- eigen(x)
    if(is.complex(e$values)) {warning("complex eigen values detected by invMatSqrt, results are suspect")
                  result <- x
-                 break} else { e$values[e$values < 0] <- 100 * .Machine$double.eps}
+      } else {
+      
+       e$values[e$values < .Machine$double.eps] <- 100 * .Machine$double.eps
    inv.sqrt.ev <- 1/sqrt(e$values)   #need to put in a check here for postive semi definite
-   result <- e$vectors %*% diag(inv.sqrt.ev) %*% t(e$vectors)
+   result <- e$vectors %*% diag(inv.sqrt.ev) %*% t(e$vectors) }
    result}
