@@ -1,4 +1,4 @@
-"factor.scores" <- function(x,f,Phi=NULL,method=c("Thurstone","tenBerge","Anderson","Bartlett","Harman")) {
+"factor.scores" <- function(x,f,Phi=NULL,method=c("Thurstone","tenBerge","Anderson","Bartlett","Harman","components")) {
     if(length(method) > 1) method <- "tenBerge"   #the default
     if(method=="regression") method <- "Thurstone"
      if(!is.matrix(f)) {Phi <- f$Phi
@@ -26,6 +26,7 @@
                w <- f}
       colnames(w) <- colnames(f)
        rownames(w) <- rownames(f)
+
        }, 
       
     "tenBerge" = { #Following Grice equation 8 to estimate scores for oblique solutions
@@ -70,8 +71,13 @@
     colnames(w) <- colnames(f)
     rownames(w) <- rownames(f)
     },
-    "none" = {w <- NULL}
+    "none" = {w <- NULL},
+    
+    "components" = {
+    w <- f }
     )
+    
+    
     
     #now find a few fit statistics
     if(is.null(w)) {results <- list(scores=NULL,weights=NULL)} else {
@@ -97,6 +103,7 @@
    	  results$R2 <- R2   #this is the multiple R2 of the scores with the factors
      }
      }
+   
      return(results) }
      #how to treat missing data?  see score.item
     
