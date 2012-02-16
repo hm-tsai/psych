@@ -347,10 +347,10 @@ function(r,nfactors=1,n.obs = NA,rotate="oblimin",scores="tenBerge",residuals=FA
     result$loadings <- loadings
     result$fm <- fm  #remember what kind of analysis we did
     
-    if(!is.null(Phi) && oblique.scores) {result$Phi <- Phi
+    if(!is.null(Phi) ) {result$Phi <- Phi      #the if statement was incorrectly including oblique.scores.  Fixed Feb, 2012 following a report by Jessica Jaynes
                        Structure <- loadings %*% Phi} else {Structure <- loadings}
                        class(Structure) <- "loadings"
-                       result$Structure <- Structure #added December 12, 2011
+                       result$Structure <- Structure #added December 12, 2011   
                       
     if(fm == "pa") result$communality.iterations <- unlist(comm.list)
     
@@ -361,6 +361,7 @@ function(r,nfactors=1,n.obs = NA,rotate="oblimin",scores="tenBerge",residuals=FA
     result$fn <- "fa"
     result$fm <- fm
     result$Call <- cl
+
     class(result) <- c("psych", "fa")
     return(result) }
     

@@ -15,12 +15,8 @@
    switch(method,   
     "Thurstone" = { w <- try(solve(r,f),silent=TRUE )  #these are the factor weights
      if(class(w)=="try-error") {message("In factor.scores, the correlation matrix is singular, an approximation is used")
-     r <- cor.smooth(r)}
-          #ev <- eigen(r)
-          # ev$values[ev$values < .Machine$double.eps] <- 100 * .Machine$double.eps
-          # r <- ev$vectors %*% diag(ev$values) %*% t(ev$vectors)
-          #diag(r)  <- 1
-          # r <- cor.smooth(r)
+               r <- cor.smooth(r)}
+        
       w <- try(solve(r,f),silent=TRUE)
       if(class(w)=="try-error") {message("I was unable to calculate the factor score weights, factor loadings used instead")
                w <- f}

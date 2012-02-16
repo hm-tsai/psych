@@ -85,7 +85,7 @@ p.iris <- principal(IRIS,5,scores=TRUE)
   }
 
    
-cluster.plot(fa(sim.circ(nvar=24),nf=2),title="two circumplex factors")
+cluster.plot(fa(sim.circ(nvar=24),nfactors=2),title="two circumplex factors")
  pairs.panels(cong) 
  #this section tests various functions that use Rgraphviz (if it is installed) 
 #  if(require(Rgraphviz))       
@@ -106,7 +106,7 @@ cluster.plot(fa(sim.circ(nvar=24),nf=2),title="two circumplex factors")
 
  } #else {warning("fa.graph, omega.graph, ICLUST.rgraph, structure.graph require Rgraphviz") }
  
- fa.diagram(fa(item.sim(16),2)) 
+ fa.diagram(fa(item.sim(16),nfactors=2)) 
   	ic.out <- ICLUST(s4,title="ICLUST of 24 Mental abilities")
   	v9 <-  omega(sim.hierarchical(),title="Omega with Schmid Leihman")
   	omega.diagram(v9,sl=FALSE,main="Omega with hierarchical factors")
@@ -125,7 +125,7 @@ cluster.plot(fa(sim.circ(nvar=24),nf=2),title="two circumplex factors")
     ss <- c(1,3,5,7,9,11,13,15)
    f <- fa(R[ss,ss],2)
    foe <- fa.extension(R[ss,-ss],f)
-   fa.diagram(f,fe=foe)
+   fa.diagram(fa.results=f,fe.results=foe)
   
   out <- list(out,fa.simple,psych.d)
  if (!short) { return(out)}

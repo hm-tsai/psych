@@ -1,9 +1,9 @@
 \name{NEWS}
 \title{News for Package 'psych'}
-\section{Changes in psych version 1.2.1 (2012-01-30)}{
+\section{Changes in psych version 1.2.130 (2012-01-30)}{
   \subsection{Introduction}{
     \itemize{
-      \item Version 1.2.1 is the development release of the psych package. It is available at the repository at \url{http://personality-project.org/r}. The released version is 1.1.12  The second digit reflects the year (i.e., 2011), the third set the month (i.e., 1.1.12 was released in December of 2011, the last two digits reflect the day of any modifications).
+      \item Version 1.2.1 is the development release of the psych package. It is available at the repository at \url{http://personality-project.org/r}. The released version is 1.1.12.  The second digit reflects the year (i.e., 2011), the third set the month (i.e., 1.1.12 was released in December of 2011, the last two digits reflect the day of any modifications).
       \item The psych package includes functions and data sets to do classic and modern psychometrics and to analyze personality  and experimental psychological data sets. The psych package has been developed as a supplement to courses in research methods in psychology, personality research, and graduate level psychometric theory. The functions are a supplement to the text (in progress): An introduction to psychometric theory with applications in R. 
       \item Additional functions are added sporadically.
       \item This news file reports changes that have been made as the package has been developed.
@@ -29,10 +29,37 @@
       \item Add option to sim.congeneric (and others) to do multiple simulations with same theta values. 
      \item add option to do subject density and item density plot to IRT plot.
       \item note that the df in set.cor should reflect the number of cases actually used
-      \item improve documentation of fa to explain how oblique SS are found
+      \item improve documentation of fa to explain how oblique SS are found.
+      \item add the ability to scale radar plots of raw data from min to max, and add a scale to radar and spider plots (e.g. circular histograms)
+      \item add the ability to add labels to lavaan.diagram
+     
     }
   }
-  }   
+  } 
+  \section{Changes in psych version 1.2.1 (2012-1-31)}{
+   \subsection{Additions}{
+  \itemize{
+    \item Modified scrub to be a bit easier to use (suggested by Josh Wilt)
+   \item Added a check in mixed.cor so that if the data are incorrect, announce it first, rather than waiting until late in the process. 
+   \item Added a progress indicator to particularly slow functions (e.g. tetrachoric, polychoric, biserial).  This will show up when using these functions in other functions (such as irt.fa or mixed.cor). 
+   \item Modified cluster.cor so that in the case of correlations that are NA, it will not find smcs of the raw correlation matrix.  In addition, it will impute scale level correlations based upon the average between scale correlation (previously it was reporting an NA).  Requested by David Condon.
+   \item Added the helper function lower.mat to print the lower submatrix.  Added this as an option to the print.psych function.
+   \item Modified mixed.cor so that it will automatically (if desired) find the Pearson, polychoric, and tetrachoric correlation matrices and then reorganize the matrix back to the original form.
+   \item Minor modifications to tetrachoric and polychoric to give slightly more helpful error messages in the case of missing data and corrections for continuity.
+   \item Minor modifications to summary to give cleaner summary stats for fa and irt.fa analyses.
+   \item Added a residual and plot.residuals function to plot either qq plots of the residuals, or a cor.plot of the residuals.
+  }
+  }
+  
+   \subsection{Bugs Fixed}{
+   \itemize{
+   \item Fixed a few references that were working but doing partial matching in print.psych, test.psych, pairs.panels (e.g, in print.psych digit=digits was changed to digits=digits, test.psych nf was changed to nfactors, col was changed to col.smooth in pairs.panels). This had been flagged by linux checking as a note about "partial matching" for a long time. Finally figured out what it meant.
+ \item corrected biplot.psych to properly take the xlim and ylim parameters (reported by Andreas M. Brandmaier)
+ \item Correction to tetrachoric (and related functions) to return NA in the case of no cases for x or y.  (Reported by David Condon)
+ \item Fixed fa so that the score.oblique option actually works. (Reported by Jessica Jaynes).
+   }
+   } 
+  }
   
   \section{Changes in psych version 1.1.12 (2011-12-30)}{
    \subsection{Additions}{

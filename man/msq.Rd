@@ -162,7 +162,10 @@ Watson,D., Clark,  L.A.  and Tellegen, A. (1988)  Development and validation of 
 
 \examples{
 data(msq)
+#basic descriptive statistics
 describe(msq)
+
+#score them for 12 short scales
 keys <- make.keys(75,list(
        EA=c(1, 26, 69, 70, 72, 31, 44, -57,-65,-23),
        TA =c(40,43,29, 64, 16, -51, -61,-47, -14, -10),
@@ -182,13 +185,20 @@ keys <- make.keys(75,list(
 rownames(keys) <- colnames(msq)[1:75]
 msq.scores <- score.items(keys,msq[1:75])
 
+#show a circumplex structure 
 fcirc <- fa(msq.scores$scores[,5:12],2)  
 factor.plot(fcirc,labels=colnames(msq.scores$scores)[5:12])
 #extend this solution to EA/TA  NA/PA space
 fe  <- fa.extension(cor(msq.scores$scores[,5:12],msq.scores$scores[,1:4]),fcirc)
 fa.diagram(fcirc,fe=fe,main="Extending the circumplex structure to  EA/TA and PA/NA ")
 
-             
+#show the 2 dimensional structure
+f2 <- fa(msq[1:70],2)
+factor.plot(f2,labels=colnames(msq)[1:70],title="2 dimensions of affect")
+
+#sort them by polar coordinates
+round(polar(f2),2)
+            
 
 }
 \keyword{datasets}

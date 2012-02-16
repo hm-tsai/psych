@@ -8,7 +8,7 @@ n.dims <- dim(x$loadings)[2]
 
 if (n.dims == 2) {
  
-  biplot(x$scores[,1:2],x$loadings[,1:2],xlabs=labels, cex=cex,main=main,...) } else {
+  biplot(x$scores[,1:2],x$loadings[,1:2],xlabs=labels, cex=cex,main=main,xlim=xlim,ylim=ylim,...) } else {
 	op1 <- par(mfrow=c(n.dims,n.dims), mar=c(2,3,3,2))
 	for (i in 1:n.dims) {
    		for (j in 1:n.dims){ 
@@ -23,4 +23,5 @@ if (n.dims == 2) {
                         }
                         par(oldop) }
 }
+#corrected 1:17:12 following suggestion by Andreas M. Brandmaier
 	

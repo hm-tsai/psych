@@ -33,8 +33,9 @@ return(x)
     if (missing(where))  where <- 1:dim(x)[2]
     maxlength <- max(length(isvalue),length(min),length(max),length(where))
     if(missing(newvalue)) newvalue <- rep(NA,maxlength)
-    if (length(min) == 1)   min <- rep(min, dim(x)[2])
-    if (length(max) == 1)  max <- rep(max, dim(x)[2])
+    if (length(min) == 1)   min <- rep(min, ncol(x))
+    if (length(max) == 1)  max <- rep(max, ncol(x))
+    if(length(where) == 1) where <- rep(where,maxlength)
     if(length(isvalue) ==1) isvalue <- rep(isvalue,maxlength)
     if(length(newvalue) ==1) newvalue <- rep(newvalue,maxlength)
    # if (length(isvalue) == 1)  isvalue <- rep(isvalue, (length(where)))
@@ -50,6 +51,7 @@ return(x)
 #added Sept 11, 2010
 #modified December 6, 2010 to allow recoding
 #modified December 3, 2011 to be more general
+#modifed January 8, 2012 to be a  bit more flexible
 
 
 

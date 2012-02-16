@@ -23,7 +23,7 @@ function (x, y,  pch = par("pch"),
         lines(stats::lowess(x[ok], y[ok], f = span, iter = iter), 
             col = col.smooth, ...)
 
-  panel.ellipse1(xm,ym,xs,ys,r,col=col.smooth,...)
+  panel.ellipse1(xm,ym,xs,ys,r,col.smooth=col.smooth,...)
 }
 
 "panel.hist.density" <-
@@ -208,7 +208,7 @@ function (x, y, pch = par("pch"),
   xs <- sd(x,na.rm=TRUE)
   ys <- sd(y,na.rm=TRUE)
   r = cor(x, y,use="pairwise")
-  panel.ellipse1(xm,ym,xs,ys,r,col=col.lm,...)
+  panel.ellipse1(xm,ym,xs,ys,r,col.smooth=col.lm,...)
    
 }
 
@@ -325,7 +325,7 @@ function (x, y,pch = par("pch"),
         lines(stats::lowess(x[ok], y[ok], f = span, iter = iter), 
             col = col.smooth, ...)
 
-  panel.ellipse1(xm,ym,xs,ys,r,col=col.smooth,...)
+  panel.ellipse1(xm,ym,xs,ys,r,col.smooth=col.smooth,...)
 }
 
 "panel.smoother.no" <- 
@@ -345,7 +345,7 @@ function (x, y,pch = par("pch"),
         lines(stats::lowess(x[ok], y[ok], f = span, iter = iter), 
             col = col.smooth, ...)
 
-  panel.ellipse1(xm,ym,xs,ys,r,col=col.smooth,...)
+  panel.ellipse1(xm,ym,xs,ys,r,col.smooth=col.smooth,...)
 }
 
 

@@ -39,6 +39,8 @@ y <- scrub(attitude,where=2:4,min=c(20,30,40),max= c(120,110,100),isvalue= c(32,
 y1 <- scrub(attitude,where="learning",isvalue=55,newvalue=999) #change a column by name
 y2 <- scrub(attitude,where="learning",min=45,newvalue=999) #change a column by name
 
+y3 <- scrub(attitude,where="learning",isvalue=c(45,48),newvalue=999) #change a column by name look for multiple values in that column
+y4 <- scrub(attitude,where="learning",isvalue=c(45,48),newvalue= c(999,-999)) #change values in one column to one of two different things
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
